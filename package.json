@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "debug": "node --experimental-specifier-resolution=node --loader ts-node/esm"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
