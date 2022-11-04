@@ -17,6 +17,8 @@ func main() {
 	check(err)
 
 	floor := 0
+	var position int
+	hasReachedBasement := false
 
 	for i := 0; i < len(res); i++ {
 		if string(res[i]) == "(" {
@@ -24,8 +26,15 @@ func main() {
 		} else if string(res[i]) == ")" {
 			floor--
 		}
+
+		if floor < 0 && !hasReachedBasement {
+			hasReachedBasement = true
+			position = i
+		}
+
 	}
 
 	fmt.Println(floor)
+	fmt.Println(position)
 
 }
