@@ -17,7 +17,7 @@ async function calcStairs() {
     }
 
     if (floor < 0 && !hasReachedBasement) {
-      position = index;
+      position = index + 1;
       hasReachedBasement = true;
     }
   });

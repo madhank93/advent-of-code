@@ -13,7 +13,7 @@ void main(List<String> args) async {
     else if (String.fromCharCode(element).contains(")")) floor--;
 
     if (floor < 0 && !hasReachedBasement) {
-      position = index;
+      position = index + 1;
       hasReachedBasement = true;
     }
   });

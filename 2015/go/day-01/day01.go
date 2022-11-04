@@ -29,7 +29,7 @@ func main() {
 
 		if floor < 0 && !hasReachedBasement {
 			hasReachedBasement = true
-			position = i
+			position = i + 1
 		}
 
 	}

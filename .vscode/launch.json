@@ -7,15 +7,27 @@
     {
       "name": "Go Launch file",
       "type": "go",
+      "trace": "verbose",
+      "mode": "auto",
       "request": "launch",
-      "mode": "debug",
-      "program": "${file}"
+      "debugAdapter": "dlv-dap",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}"
     },
     {
       "name": "Dart & Flutter",
       "request": "launch",
       "type": "dart",
       "program": "${file}"
+    },
+    {
+      "name": "Launch via NPM",
+      "request": "launch",
+      "program": "${file}",
+      "runtimeArgs": ["run-script", "debug"],
+      "runtimeExecutable": "npm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
     }
   ]
 }
